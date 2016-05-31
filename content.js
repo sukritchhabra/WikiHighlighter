@@ -21,7 +21,6 @@ highlightWikiLinks(); // If link opened already has a wiki result
 $('body').on('keydown', '.gsfi', function(event) {
     highlightWikiLinks();
     if ( event.which === 13 ) {
-        console.log('pressed enter');
         highlightWikiLinks();
     }
 });
