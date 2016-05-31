@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "WikiHighlighter",
+    "description": "A chrome extension that highlights wikipedia links in Google Search results.",
+    "version": "1.0",
+
+    "author": "Sukrit Chhabra",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+    "content_scripts": [ {
+      "js": [ "jquery.min.js", "content.js" ],
+      "matches": [ "http://*/*", "https://*/*"]
+    }]
+}
