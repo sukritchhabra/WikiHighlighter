@@ -18,11 +18,11 @@ function highlightWikiLinks() {
 
 highlightWikiLinks(); // If link opened already has a wiki result
 
-$('body').on('keydown', '.gsfi', function(event) {
+$('body').on('keydown', '#lst-ib', function(event) {
     highlightWikiLinks();
 });
 
-$('.gsfi').on('keydown', function(event) {
+$('#lst-ib').on('keydown', function(event) {
     highlightWikiLinks();
     if ( event.keyCode === 13 ) {
         setTimeout(highlightWikiLinks, 2000);
