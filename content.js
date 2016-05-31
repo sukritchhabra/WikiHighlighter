@@ -16,7 +16,7 @@ function highlightWikiLinks() {
     };
 }
 
-highlightWikiLinks(); // If link opened already has a wiki result
+setTimeout(highlightWikiLinks, 2000); // If link opened already has a wiki result
 
 $('body').on('keydown', '#lst-ib', function(event) {
     highlightWikiLinks();
@@ -25,6 +25,6 @@ $('body').on('keydown', '#lst-ib', function(event) {
 $('#lst-ib').on('keydown', function(event) {
     highlightWikiLinks();
     if ( event.keyCode === 13 ) {
-        setTimeout(highlightWikiLinks, 2000);
+        setTimeout(highlightWikiLinks, 1500);
     }
 });
