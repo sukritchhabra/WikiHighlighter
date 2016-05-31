@@ -20,11 +20,11 @@ highlightWikiLinks(); // If link opened already has a wiki result
 
 $('body').on('keydown', '.gsfi', function(event) {
     highlightWikiLinks();
-    if ( event.which === 13 ) {
-        highlightWikiLinks();
-    }
 });
 
 $('.gsfi').on('keydown', function(event) {
     highlightWikiLinks();
+    if ( event.keyCode === 13 ) {
+        setTimeout(highlightWikiLinks, 2000);
+    }
 });
