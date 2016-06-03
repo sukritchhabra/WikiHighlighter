@@ -43,6 +43,6 @@ $('body').on('click', 'a', function(event) {
 $('#lst-ib').on('keydown', function(event) {
     highlightWikiLinks();
     if ( event.keyCode === 13 ) {
-        setTimeout(highlightWikiLinks, 1500);
+        setTimeout(highlightWikiLinks, 1200);
     }
 });
