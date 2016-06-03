@@ -16,10 +16,28 @@ function highlightWikiLinks() {
     };
 }
 
-setTimeout(highlightWikiLinks, 2000); // If link opened already has a wiki result
+/**
+ * A function that calls highlightWikiLinks() with a timeout
+ * @param  {[type]} num   [ Number of iterations ]
+ * @param  {[type]} value [ Increase in each iteration ]
+ * @param  {[type]} begin [ Starting value ]
+ */
+function highlightWithTimeout (num, value, begin) {
+    var total = begin;
+    for (var i = 0; i < num; i++) {
+        setTimeout(highlightWikiLinks, total);
+        total = total + value;
+    };
+}
+
+highlightWithTimeout(5, 300, 300);
 
 $('body').on('keydown', '#lst-ib', function(event) {
     highlightWikiLinks();
+});
+
+$('body').on('click', 'a', function(event) {
+    highlightWithTimeout(3, 300, 200);
 });
 
 $('#lst-ib').on('keydown', function(event) {
