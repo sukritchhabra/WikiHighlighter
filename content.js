@@ -18,7 +18,7 @@ function highlightWikiLinks() {
 
 /**
  * A function that calls highlightWikiLinks() with a timeout
- * @param  {[type]} num   [ Number of iterations ]
+ * @param  {[type]} num   [ Number of times highlightWikiLinks() is called ]
  * @param  {[type]} value [ Increase in each iteration ]
  * @param  {[type]} begin [ Starting value ]
  */
@@ -30,19 +30,19 @@ function highlightWithTimeout (num, value, begin) {
     };
 }
 
-highlightWithTimeout(5, 300, 300);
+highlightWithTimeout(30, 100, 50);
 
 $('body').on('keydown', '#lst-ib', function(event) {
     highlightWikiLinks();
 });
 
 $('body').on('click', 'a', function(event) {
-    highlightWithTimeout(3, 300, 200);
+    highlightWithTimeout(30, 100, 50);
 });
 
 $('#lst-ib').on('keydown', function(event) {
     highlightWikiLinks();
     if ( event.keyCode === 13 ) {
-        setTimeout(highlightWikiLinks, 1200);
+        highlightWithTimeout(30, 100, 50);
     }
 });
