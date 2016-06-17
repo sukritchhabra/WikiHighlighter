@@ -33,7 +33,7 @@ function highlightWithTimeout (num, value, begin) {
 highlightWithTimeout(30, 100, 50);
 
 $('body').on('keydown', '#lst-ib', function(event) {
-    highlightWikiLinks();
+    highlightWithTimeout(10, 100, 50);
 });
 
 $('body').on('click', 'a', function(event) {
