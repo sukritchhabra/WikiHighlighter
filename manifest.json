@@ -3,7 +3,7 @@
 
     "name": "WikiHighlighter",
     "description": "A chrome extension that highlights wikipedia links in Google Search results.",
-    "version": "1.0",
+    "version": "1.0.1",
 
     "author": "Sukrit Chhabra",
 
